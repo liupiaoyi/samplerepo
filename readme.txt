@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 readme first
-
-try 
-
-
-
-=======
+try
 readme first
 online change
+222
