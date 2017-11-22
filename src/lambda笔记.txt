@@ -1,0 +1,38 @@
+﻿基本语法:
+(parameters) -> expression 或 (parameters) ->{ statements; }
+(参数为一个是，括号可以省略)
+
+lambda应用方法：(用来替换只有一个方法的接口)
+1静态方法引用 Math::cos   x->math.cos(x)
+2特定对象的实例方法引用
+3类对象的实例方法引用 s->s.method()
+4构造函数的引用 Person::new （）-> new person()
+
+
+
+定义接口（规范参数类型）-->定义方法（使用接口规定的方法处理参数，运算并返回结果）-->调用（参数类型必须和方法参数一致）
+(或：新建接口对象 = （形参）->运算方法; 对象.方法（实参） )
+
+
+
+java.util.function
+predicate<T> 预测，返回Boolean
+function<T,R> 传参，返回R
+consumer<T> 传参，没有返回值
+supplier<T> 没有入参，只有返回值
+
+person.stream().filter(perdicate).collect
+
+
+stream
+不存数据，不改数据
+lazy 懒加载，并行，不能按下标查找
+有中间方法和终端方法（终端之后，本次流结束）
+
+构建
+1 collection Stream = list.stream
+2 数组 arrays.stream( .... ) 存基本类型数据或对象
+（int long double 有自己专用数组）
+基本数值型 有三种对应的包装类型 Stream：   IntStream、LongStream、DoubleStream
+
+相关方法findFirst findAny
